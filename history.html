@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>History archive</title>
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <div class="brand">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h1>History archive</h1>
+            <p class="sub" id="save-hint">Optional JSON export to ~/.chromium/history</p>
+          </div>
+        </div>
+        <div class="toolbar">
+          <label class="field grow">
+            <span>Search</span>
+            <input id="q" type="search" placeholder="Title, URL, or domain" autocomplete="off" />
+          </label>
+          <label class="field">
+            <span>From</span>
+            <input id="from" type="date" />
+          </label>
+          <label class="field">
+            <span>To</span>
+            <input id="to" type="date" />
+          </label>
+          <label class="field">
+            <span>Sort</span>
+            <select id="sort">
+              <option value="lastVisitTime">Last visit</option>
+              <option value="visitCount">Visit count</option>
+              <option value="title">Title</option>
+              <option value="url">URL</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <section class="stats" id="stats" aria-live="polite"></section>
+
+      <main class="layout">
+        <section class="list-pane">
+          <div class="list-head">
+            <span>Pages</span>
+            <label class="check">
+              <input id="group-domain" type="checkbox" />
+              Group by domain
+            </label>
+          </div>
+          <div id="list" class="list" role="list"></div>
+          <div id="list-status" class="status"></div>
+        </section>
+        <aside class="detail" id="detail">
+          <p class="empty">Select a page to see visit-level detail.</p>
+        </aside>
+      </main>
+
+      <footer class="bar">
+        <div class="save-opts">
+          <label class="check">
+            <input id="include-visits" type="checkbox" checked />
+            Include each visit in JSON
+          </label>
+          <label class="check">
+            <input id="filtered-only" type="checkbox" />
+            Export current filter only
+          </label>
+        </div>
+        <div class="actions">
+          <button type="button" id="choose-folder" class="ghost">Choose ~/.chromium/history</button>
+          <button type="button" id="save-json" class="primary">Save JSON</button>
+          <button type="button" id="download-json" class="ghost">Download instead</button>
+        </div>
+        <p id="save-status" class="status"></p>
+      </footer>
+    </div>
+    <script src="history.js"></script>
+  </body>
+</html>

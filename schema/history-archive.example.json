@@ -1,0 +1,43 @@
+{
+  "$comment": "JSON archive written by Chromium History Archive. formatVersion 1.",
+  "format": "chromium-history-archive",
+  "formatVersion": 1,
+  "exportedAt": "2026-09-04T12:00:00.000Z",
+  "browser": "user-agent string",
+  "source": "Chromium History Archive extension",
+  "filters": {
+    "query": "",
+    "from": null,
+    "to": null,
+    "filteredOnly": false,
+    "includeVisits": true
+  },
+  "stats": {
+    "uniqueUrls": 1,
+    "recordedVisits": 2,
+    "uniqueDomains": 1
+  },
+  "entries": [
+    {
+      "id": "1",
+      "url": "https://example.com/",
+      "title": "Example",
+      "domain": "example.com",
+      "visitCount": 2,
+      "typedCount": 1,
+      "lastVisitTime": 1756987200000,
+      "lastVisitTimeISO": "2026-09-04T12:00:00.000Z",
+      "visits": [
+        {
+          "visitId": "10",
+          "referringVisitId": "0",
+          "visitTime": 1756987200000,
+          "visitTimeISO": "2026-09-04T12:00:00.000Z",
+          "transition": "typed",
+          "transitionLabel": "Typed in the address bar",
+          "isLocal": true
+        }
+      ]
+    }
+  ]
+}
